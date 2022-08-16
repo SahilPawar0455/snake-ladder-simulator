@@ -10,20 +10,21 @@ public class SnakeAndLadder {
             int die = (int) (Math.random() * (6) + 1);
             System.out.println("Roll The Die to Get a Number is = " + die);
             int option = (int) (Math.random() * (3) + 1);
-            if (option == 1) {
+            if ((option == 1) && ((nowYourPosition + die) <= 100)) {
                 System.out.println("Your get Ladder");
                 nowYourPosition = nowYourPosition + die;
             } else if (option == 2) {
                 System.out.println("Your get snake");
                 nowYourPosition = nowYourPosition - die;
-                if (nowYourPosition < 0){
+                if (nowYourPosition < 0) {
                     nowYourPosition = 0;
                 }
             } else {
                 System.out.println("No play");
                 nowYourPosition = nowYourPosition;
             }
-            System.out.println("Now your Position is " + nowYourPosition);
+            System.out.println("Now your Position is " + nowYourPosition );
         }
+        System.out.println("You have Win The Game");
     }
 }
